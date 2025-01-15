@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/goGayo"
+        android:title="가요제 보러가기"
+        />
+    <item
+        android:id="@+id/goMessage"
+        android:title="메시지 남기러가기" />
+</menu>
