@@ -1,12 +1,15 @@
 package com.example.andkotlinproject
 
+import android.graphics.Movie
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.andkotlinproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +28,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val datas = mutableListOf<Poster>()
+        for (i in 0 until poster.size) {
+            var m = Poster(ContextCompat.getDrawable(this, poster[i])!!, title[i])
+            datas.add(m)
+        }
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        val adapter = PosterAdapter(datas)
+        binding.recyclerView.adapter = adapter
+
 
         // 툴바 설정
         setSupportActionBar(binding.toolbar)
