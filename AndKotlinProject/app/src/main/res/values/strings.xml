@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndKotlinProject</string>
+    <string name="app_name">MUDO</string>
+    <string name="navi_go_gayo">Go Gayo</string>
+    <string name="navi_go_message">Go Message</string>
 </resources>
