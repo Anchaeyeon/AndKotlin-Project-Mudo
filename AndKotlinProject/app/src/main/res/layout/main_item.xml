@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    android:background="#EFF3EA"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/poster"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가요제 이름"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="118dp"
+            android:layout_marginLeft="110dp"
+            android:id="@+id/jayoName"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#474040"
+            android:text="보러가기"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="0dp"
+            android:id="@+id/btnSee"/>
+    </LinearLayout>
+</LinearLayout>
