@@ -44,7 +44,7 @@ class SongActivity : AppCompatActivity() {
         // 받은 데이터를 UI에 설정
         binding.gayoTitle.text = gayojaeTitle
 
-        // 이미지 & 제목 보여주기
+        // 이미지 & 제목 & 가수 보여주기
         val datas = mutableListOf<Song>()
         for (i in 0 until songPoster.size) {
             val m = Song(ContextCompat.getDrawable(this, songPoster[i])!!, songTitle[i], singer[i])
