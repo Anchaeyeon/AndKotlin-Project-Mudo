@@ -1,9 +1,7 @@
 package com.example.andkotlinproject
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.andkotlinproject.databinding.ActivityMainBinding
 import com.example.andkotlinproject.databinding.ActivitySongBinding
 
 class SongActivity : AppCompatActivity() {
