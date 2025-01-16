@@ -21,6 +21,11 @@ class MessageActivity : AppCompatActivity() {
         binding = ActivityMessageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.fab.setOnClickListener {
+            val intent = Intent(this, WriteActivity::class.java)
+            startActivity(intent)
+        }
+
         // 툴바 설정
         setSupportActionBar(binding.toolbar)
 
