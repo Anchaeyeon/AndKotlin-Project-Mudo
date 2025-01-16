@@ -61,6 +61,9 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.goMessage -> {
                     Toast.makeText(this, "메시지 남기러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this, MessageActivity::class.java)
+                    startActivity(intent)
                 }
             }
             binding.whole.closeDrawer(GravityCompat.START) //내비게이션 닫기

@@ -5,16 +5,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.andkotlinproject.databinding.ActivityMainBinding
+import com.example.andkotlinproject.databinding.ActivityMessageBinding
 
 class MessageActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityMessageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_message)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityMessageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        /*  바인딩 사용 예   : bindig.id이름.XXX
+        binding.btn.setOnClickListener {
+            binding.txtResult.text = "계산결과"
         }
+       */
     }
 }
