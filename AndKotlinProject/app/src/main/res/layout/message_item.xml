@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:layout_margin="20dp"
+    android:layout_margin="10dp"
     android:background="#FFF2C2"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:gravity="center_vertical|center_horizontal">
+    android:gravity="center_vertical">
     <TextView
+        android:id="@+id/toPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To. 받는 사람"
+        android:text="받는 사람"
         android:textStyle="bold"
         android:textSize="15dp"
         android:layout_gravity="start"
         android:layout_marginRight="30dp"
-        android:padding="10dp"
-        android:id="@+id/toPerson"/>
+        android:padding="10dp"/>
     <TextView
+        android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="내용"
-        android:textStyle="bold"
         android:textSize="16dp"
         android:padding="10dp"
         android:layout_gravity="center"
-        android:id="@+id/content"/>
+        android:gravity="center"
+        android:layout_weight="1"/>
     <TextView
+        android:id="@+id/fromPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:padding="10dp"
-        android:text="from. 보내는 사람"
+        android:text="보내는 사람"
         android:textStyle="bold"
         android:textSize="15dp"
-        android:id="@+id/fromPerson"/>
+        android:layout_gravity="end|bottom"
+        android:padding="10dp"/>
 </LinearLayout>
