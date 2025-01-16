@@ -1,5 +1,6 @@
 package com.example.andkotlinproject
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +26,17 @@ class PosterAdapter(val datas: MutableList<Poster>): RecyclerView.Adapter<Recycl
         var m: Poster = datas[position]
         binding.gayoName.text = m.title
         binding.poster.setImageDrawable(m.image)
+
+        // btnSee 눌렀을 때 SongActivity로 이동
+        binding.btnSee.setOnClickListener {
+            val context = binding.root.context
+            val intent = Intent(context, SongActivity::class.java)
+            intent.putExtra("Gayo_Title", m.title)  // 데이터 전달
+            context.startActivity(intent)
+        }
+
+        // 아이템 클릭 이벤트 처리
+        holder.itemView.setOnClickListener { itemClick?.onClick(it, position) }
     }
 
     override fun getItemCount(): Int { return datas.size; }

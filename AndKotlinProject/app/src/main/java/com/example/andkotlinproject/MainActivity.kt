@@ -1,9 +1,10 @@
 package com.example.andkotlinproject
 
-import android.graphics.Movie
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // 이미지 & 제목 보여주기
         val datas = mutableListOf<Poster>()
         for (i in 0 until poster.size) {
             var m = Poster(ContextCompat.getDrawable(this, poster[i])!!, title[i])
@@ -53,8 +55,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.mainDrawerView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.goGayo-> { Toast.makeText(this, "가요제 보러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show() }
-                R.id.goMessage -> { Toast.makeText(this, "메시지 남기러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show()}
+                R.id.goGayo -> {
+                    Toast.makeText(this, "가요제 보러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show()
+                }
+
+                R.id.goMessage -> {
+                    Toast.makeText(this, "메시지 남기러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show()
+                }
             }
             binding.whole.closeDrawer(GravityCompat.START) //내비게이션 닫기
             true //true를 반환하면 클릭 이벤트가 처리됨
