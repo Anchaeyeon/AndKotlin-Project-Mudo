@@ -31,7 +31,7 @@ class PosterAdapter(val datas: MutableList<Poster>): RecyclerView.Adapter<Recycl
         binding.btnSee.setOnClickListener {
             val context = binding.root.context
             val intent = Intent(context, SongActivity::class.java)
-            intent.putExtra("Gayo_Title", m.title)  // 데이터 전달
+            intent.putExtra("Gayojae_Title", m.title)  // 데이터 전달
             context.startActivity(intent)
         }
 
