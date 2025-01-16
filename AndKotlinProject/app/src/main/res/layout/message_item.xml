@@ -14,7 +14,8 @@
         android:textSize="15dp"
         android:layout_gravity="start"
         android:layout_marginRight="30dp"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:id="@+id/toPerson"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +23,8 @@
         android:textStyle="bold"
         android:textSize="16dp"
         android:padding="10dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/content"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,5 +32,6 @@
         android:padding="10dp"
         android:text="from. 보내는 사람"
         android:textStyle="bold"
-        android:textSize="15dp"/>
+        android:textSize="15dp"
+        android:id="@+id/fromPerson"/>
 </LinearLayout>

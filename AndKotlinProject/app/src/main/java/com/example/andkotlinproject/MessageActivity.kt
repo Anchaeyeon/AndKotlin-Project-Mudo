@@ -11,15 +11,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.andkotlinproject.databinding.ActivityMainBinding
 import com.example.andkotlinproject.databinding.ActivityMessageBinding
 
 class MessageActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMessageBinding
+    val helper = MyDBHelper(this)
+    val datas = mutableListOf<Write>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMessageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        var adapter = WriteAdapter(datas)
+        datas.addAll(helper.allTodo())
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter = adapter
 
         binding.fab.setOnClickListener {
             val intent = Intent(this, WriteActivity::class.java)
