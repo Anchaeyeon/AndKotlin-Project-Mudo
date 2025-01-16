@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.goGayo -> {
                     Toast.makeText(this, "가요제 보러가기가 클릭되었습니다", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
 
                 R.id.goMessage -> {
