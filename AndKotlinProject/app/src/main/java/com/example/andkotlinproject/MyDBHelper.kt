@@ -46,7 +46,7 @@ class MyDBHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME, nul
         return data
     }
 
-    fun addTodo(write: Write) {
+    fun addCheer(write: Write) {
         val sql = "insert into ${TABLE_NAME}(team, name, text) values(?,?,?);"
         val db = writableDatabase;
         val args = arrayOf(write.team, write.name, write.text)

@@ -32,7 +32,7 @@ class WriteActivity : AppCompatActivity() {
             val name = binding.userName.text.toString()
             val text = binding.cheerText.text.toString()
             val write = Write(team, name, text)
-            myDB.addTodo(write)
+            myDB.addCheer(write)
             Toast.makeText(this, "응원의 메세지가 작성되었습니다", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MessageActivity::class.java)
             startActivity(intent)
